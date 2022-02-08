@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Arkham horror</title>
+  </head>
+  <body class="tokens">
+      <div style="display: flex;">
+        <div>
+            <label>+1</label>
+            <div style="display: flex;">
+              <button onclick="handlePlusOneTokenDecrement()"><</button>
+              <div class="tokens__plusOneToken">0</div>
+              <button onclick="handlePlusOneTokenIncrement()">></button>
+            </div>
+        </div>
+        <div>
+            <label>0</label>
+            <div style="display: flex;">
+              <button onclick="handleZeroTokenDecrement()"><</button>
+              <div class="tokens__zeroToken">2</div>
+              <button onclick="handleZeroTokenIncrement()">></button>
+            </div>
+        </div>
+        <div>
+            <label>-1</label>
+            <div style="display: flex;">
+              <button onclick="handleMinusOneTokenDecrement()"><</button>
+              <div class="tokens__minusOneToken">2</div>
+              <button onclick="handleMinusOneTokenIncrement()">></button>
+            </div>
+        </div>
+        <div>
+            <label>-2</label>
+            <div style="display: flex;">
+              <button onclick="handleMinusTwoTokenDecrement()"><</button>
+              <div class="tokens__minusTwoToken">2</div>
+              <button onclick="handleMinusTwoTokenIncrement()">></button>
+            </div>
+        </div>
+        <div>
+            <label>-3</label>
+            <div style="display: flex;">
+              <button onclick="handleMinusThreeTokenDecrement()"><</button>
+              <div class="tokens__minusThreeToken">1</div>
+              <button onclick="handleMinusThreeTokenIncrement()">></button>
+            </div>
+        </div>
+        <div>
+            <label>-4</label>
+            <div style="display: flex;">
+              <button onclick="handleMinusFourTokenDecrement()"><</button>
+              <div class="tokens__minusFourToken">1</div>
+              <button onclick="handleMinusFourTokenIncrement()">></button>
+            </div>
+        </div>
+        <div>
+            <label>-5</label>
+            <div style="display: flex;">
+              <button onclick="handleMinusFiveTokenDecrement()"><</button>
+              <div class="tokens__minusFiveToken">1</div>
+              <button onclick="handleMinusFiveTokenIncrement()">></button>
+            </div>
+        </div>
+        <div>
+            <label>-6</label>
+            <div style="display: flex;">
+              <button onclick="handleMinusSixTokenDecrement()"><</button>
+              <div class="tokens__minusSixToken">0</div>
+              <button onclick="handleMinusSixTokenIncrement()">></button>
+            </div>
+        </div>
+        <div>
+            <label>Skull</label>
+            <div style="display: flex;">
+              <button onclick="handleSkullTokenDecrement()"><</button>
+              <div class="tokens__skullToken">2</div>
+              <button onclick="handleSkullTokenIncrement()">></button>
+            </div>
+            <div style="display: flex;">
+                <button onclick="handleSkullTokenValueDecrement()"><</button>
+                <div class="tokens__skullTokenValue">-2</div>
+                <button onclick="handleSkullTokenValueIncrement()">></button>
+              </div>
+        </div>
+        <div>
+            <label>Cultist</label>
+            <div style="display: flex;">
+              <button onclick="handleCultistTokenDecrement()"><</button>
+              <div class="tokens__cultistToken">1</div>
+              <button onclick="handleCultistTokenIncrement()">></button>
+            </div>
+            <div style="display: flex;">
+                <button onclick="handleCultistTokenValueDecrement()"><</button>
+                <div class="tokens__cultistTokenValue">-2</div>
+                <button onclick="handleCultistTokenValueIncrement()">></button>
+              </div>
+        </div>
+        <div>
+            <label>Tombstone</label>
+            <div style="display: flex;">
+              <button onclick="handleTombstoneTokenDecrement()"><</button>
+              <div class="tokens__tombstoneToken">2</div>
+              <button onclick="handleTombstoneTokenIncrement()">></button>
+            </div>
+            <div style="display: flex;">
+                <button onclick="handleTombstoneTokenValueDecrement()"><</button>
+                <div class="tokens__tombstoneTokenValue">-3</div>
+                <button onclick="handleTombstoneTokenValueIncrement()">></button>
+              </div>
+        </div>
+        <div>
+            <label>Squid</label>
+            <div style="display: flex;">
+              <button onclick="handleSquidTokenDecrement()"><</button>
+              <div class="tokens__squidToken">0</div>
+              <button onclick="handleSquidTokenIncrement()">></button>
+            </div>
+            <div style="display: flex;">
+                <button onclick="handleSquidTokenValueDecrement()"><</button>
+                <div class="tokens__squidTokenValue">-2</div>
+                <button onclick="handleSquidTokenValueIncrement()">></button>
+              </div>
+        </div>
+        <div>
+            <label>Star</label>
+            <div style="display: flex;">
+              <button onclick="handleStarTokenDecrement()"><</button>
+              <div class="tokens__starToken">1</div>
+              <button onclick="handleStarTokenIncrement()">></button>
+            </div>
+            <div style="display: flex;">
+                <button onclick="handleStarTokenValueDecrement()"><</button>
+                <div class="tokens__starTokenValue">2</div>
+                <button onclick="handleStarTokenValueIncrement()">></button>
+              </div>
+        </div>
+        <div>
+            <label>Autofail</label>
+            <div style="display: flex;">
+              <button onclick="handleAutoFailTokenDecrement()"><</button>
+              <div class="tokens__autoFailToken">1</div>
+              <button onclick="handleAutoFailTokenIncrement()">></button>
+            </div>
+        </div>
+          
+           
+          
+         
+          
+      </div>
+    <div class="settings">
+      <div class="settings__hauntedGround">
+        <label>Haunted ground</label>
+        <div style="display: flex">
+          <button
+            onclick="handleHauntedGroundToggle()"
+            class="settings__hauntedGround__disable"
+          >
+            <
+          </button>
+          <div class="settings__hauntedGround__display">false</div>
+          <button
+            onclick="handleHauntedGroundToggle()"
+            class="settings__hauntedGround__enable"
+          >
+            >
+          </button>
+        </div>
+      </div>
+      <div class="settings__candlelight">
+        <label>Candlelight</label>
+        <div style="display: flex">
+          <button
+            onclick="handleCandlelightDecrement()"
+            class="settings__candlelight__decrement"
+          >
+            <
+          </button>
+          <div class="settings__candlelight__display">0</div>
+          <button
+            onclick="handleCandlelightIncrement()"
+            class="settings__candlelight__increment"
+          >
+            >
+          </button>
+        </div>
+      </div>
+      <div class="settings__testDifficulty">
+        <label>Test Difficulty</label>
+        <div style="display: flex">
+          <button
+            onclick="handleTestDifficultyDecrement()"
+            class="settings__testDifficulty__decrement"
+          >
+            <
+          </button>
+          <div class="settings__testDifficulty__display">0</div>
+          <button
+            onclick="handleTestDifficultyIncrement()"
+            class="settings__testDifficulty__increment"
+          >
+            >
+          </button>
+        </div>
+      </div>
+      <div class="settings__statLine">
+        <label>Statline</label>
+        <div style="display: flex">
+          <button
+            onclick="handleStatLineDecrement()"
+            class="settings__statLine__decrement"
+          >
+            <
+          </button>
+          <div class="settings__statLine__display">0</div>
+          <button
+            onclick="handleStatLineIncrement()"
+            class="settings__statLine__increment"
+          >
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="results">
+        <label>Standard - Test</label>
+      <div class="results__standard">0%</div>
+      <label>McOlive - Test</label>
+      <div class="results__mcOlive">0%</div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
