@@ -11,6 +11,11 @@ var testDifficultyDisplay = document.querySelector(
   ".settings__testDifficulty__display"
 );
 var statLineDisplay = document.querySelector(".settings__statLine__display");
+
+//Token button and bag
+let tokenButton = document.querySelector(".tokenButton");
+let tokenBagSettings = document.querySelector(".tokenBag");
+
 // tokens amount display selectors
 let plusOneTokenDisplay = document.querySelector(".tokens__plusOneToken");
 let zeroTokenDisplay = document.querySelector(".tokens__zeroToken");
@@ -80,6 +85,12 @@ let tombstoneTokenAmount = 2;
 let squidTokenAmount = 0;
 let starTokenAmount = 1;
 let autoFailTokenAmount = 1;
+
+// Handle token bag toggle
+
+tokenButton.addEventListener("click", () => {
+  tokenBagSettings.classList.toggle("showBag");
+})
 
 // Handle token amounts
 
